@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>cswi</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>__block IMP origImpl;
+__block Method origMethod;
+__block BOOL methodHasBeenCalled;
+
+beforeEach(^{
+    methodHasBeenCalled = NO;
+    origMethod = class_getInstanceMethod([&lt;#ClassName#&gt; class], @selector(&lt;#selector#&gt;));
+	
+    IMP mockBlock = imp_implementationWithBlock(^(id _self &lt;#, ...#&gt;){
+        methodHasBeenCalled = YES;
+        
+        &lt;#Block implementation#&gt;
+    });
+	
+    origImpl = method_setImplementation(origMethod, mockBlock);
+    
+    &lt;#Call to test...#&gt;
+});
+
+afterEach(^{
+    method_setImplementation(origMethod, origImpl);
+});
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2A55CBB0-F3D8-45E7-B763-F0A3669A6C45</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Swizzle Helper Snippet</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Cedar Swizzle</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

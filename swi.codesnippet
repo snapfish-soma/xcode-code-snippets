@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>swi</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    __block Swizzlean *methodSwizz;
+    __block BOOL methodHasBeenCalled;
+    
+    beforeEach(^{
+        methodHasBeenCalled = NO;
+        methodSwizz = [[Swizzlean alloc] initWithClassToSwizzle:[&lt;#ClassName#&gt; class]];
+        [methodSwizz swizzleInstanceMethod:@selector(&lt;#selector#&gt;) withReplacementImplementation:^(id self, &lt;#, ...#&gt;) {
+            methodHasBeenCalled = YES;
+            
+            &lt;#Block implementation#&gt;
+        }];
+        
+        &lt;#Call to test...#&gt;
+    });
+    
+    afterEach(^{
+        [methodSwizz resetSwizzledInstanceMethod];
+    });</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C472E415-481F-4B39-AEFC-7D9DCD543CBB</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Swizzlean Helper snippet for Instance Methods</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swizzlean (Instance Method)</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

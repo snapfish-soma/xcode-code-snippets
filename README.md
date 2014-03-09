@@ -1,10 +1,10 @@
 # Xcode Code Snippets
 
-Some code snippets I have in m collection.
+Collection of Xcode Snippets
 
-# Install
+## Install
 
 1. Clone this repo:
-    * ``git clone https://github.com/otaviocc/xcode-snippets``
+    * ``git clone https://github.com/snapfish-soma/xcode-code-snippets/``
 1. Copy the snippets to Xcode's folder:
-    * ``cp xcode-snippets/*.codesnippet ~/Library/Developer/Xcode/UserData/CodeSnippets/``
+    * ``cp xcode-code-snippets/*.codesnippet ~/Library/Developer/Xcode/UserData/CodeSnippets/``

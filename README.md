@@ -1,4 +1,4 @@
-#Xcode-snippets
+# Xcode Code Snippets
 
 Some code snippets I have in m collection.
 

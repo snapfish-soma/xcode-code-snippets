@@ -17,9 +17,9 @@
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Specta before each block</string>
+	<string>Cedar/Specta before each block</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Specta beforeEach</string>
+	<string>Cedar/Specta beforeEach</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
